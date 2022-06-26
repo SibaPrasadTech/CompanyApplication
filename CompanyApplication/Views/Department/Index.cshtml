@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CompanyApplication.Models.Department>
+<!DOCTYPE html>
+
+<html>
+<head>
+</head>
+<body>
+    <h3><strong>Departments</strong></h3>
+    <button>@Html.ActionLink("Add Department", "AddDepartment", null, "Department" )</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(m => m.DepartmentId)</th>
+                <th>@Html.DisplayNameFor(m => m.DeptName)</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var dept in Model)
+            {
+                <tr>
+                    <td>@dept.DepartmentId</td>
+                    <td>@dept.DeptName</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

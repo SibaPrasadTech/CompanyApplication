@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CompanyApplication.ViewModels.DepartmentExtendedViewModel>
+<!DOCTYPE html>
+
+<html>
+<head>
+</head>
+<body>
+    <h3><strong>Departments</strong></h3>
+    <button>@Html.ActionLink("Add Department", "AddDepartment", null, "Department")</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Department Name</th>
+                <th>Total Employees</th>
+                <th>Average Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var deptEx in Model)
+            {
+                <tr>
+                    <td>@deptEx.DepartmentName</td>
+                    <td>@deptEx.TotalNumberOfEmployees</td>
+                    <td>@deptEx.AverageSalary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

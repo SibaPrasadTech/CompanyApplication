@@ -1,0 +1,20 @@
+﻿@model CompanyApplication.Models.Department
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm("SaveDepartment", "Department"))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.DeptName)
+            @Html.TextBoxFor(m => m.DeptName, new { @class = "form-control" })
+        </div>
+        <button type="submit" class="btn btn-secondary">Add</button>
+    }
+</body>
+</html>
